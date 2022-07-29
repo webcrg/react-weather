@@ -1,1 +1,1 @@
-export { Weather } from './components/weather';
+export * from './components/weather';

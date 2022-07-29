@@ -7,7 +7,7 @@ import rootReducer from './rootReducer';
 const loggerMiddleware = createLogger();
 
 const persistConfig = {
-  key: 'root',
+  key: 'weatherFavorites',
   storage,
   whitelist: ['favorites'],
 };
@@ -17,13 +17,12 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const setupStore = () =>
   configureStore({
     reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) => {
-      return getDefaultMiddleware({
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
         serializableCheck: {
           ignoredActions: ['persist/PERSIST'],
         },
-      }).concat(loggerMiddleware);
-    },
+      }).concat(loggerMiddleware),
   });
 
 export type RootState = ReturnType<typeof rootReducer>;

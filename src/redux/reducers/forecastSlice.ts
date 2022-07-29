@@ -1,5 +1,5 @@
-import { IforecastItem, IforecastResponseItem } from '@/components/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IforecastItem } from '@/types';
 
 interface IforecastState {
   forecast: IforecastItem[];

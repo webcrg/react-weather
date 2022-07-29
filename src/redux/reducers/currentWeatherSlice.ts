@@ -1,7 +1,8 @@
-import { IcurrentWeather } from '@/components/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IcurrentWeather } from '@/types';
 
 const initialState = {
+  currentCity: 'Moscow',
   weather: {},
   isLoading: false,
   error: '',
@@ -11,6 +12,9 @@ const currentWeatherSlice = createSlice({
   name: 'currentWeather',
   initialState,
   reducers: {
+    setCurrentCity(state, action) {
+      state.currentCity = action.payload;
+    },
     currentWeatherFetching(state) {
       state.isLoading = true;
     },

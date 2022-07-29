@@ -1,14 +1,19 @@
-import { Box, Tabs, Tab, Typography } from '@mui/material';
+import { Box, Tabs, Tab } from '@mui/material';
 import React from 'react';
 import NowPanel from './now-panel/now-panel';
 import { DetailsPanel } from './details-panel';
 import { ForecastPanel } from './forecast-panel';
 
+interface TabPanelProps {
+  children: React.ReactNode;
+  index: number;
+  value: number;
+  dir?: string;
+  overflowY?: string;
+}
+
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, overflowY, ...other } = props;
-
-  // console.log(sx);
-
   return (
     <div
       role="tabpanel"
@@ -18,7 +23,9 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3, height: '400px', overflowY }}>{children}</Box>
+        <Box sx={{ p: 3, height: '400px', overflowY: overflowY ?? 'auto' }}>
+          {children}
+        </Box>
       )}
     </div>
   );

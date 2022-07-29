@@ -1,29 +1,5 @@
-// import { SET_HEART_STATE, FAVORITES_TOGGLE } from '@/redux/actions';
+import { createSlice } from '@reduxjs/toolkit';
 import { FAVORITES_PLACEHOLDER } from '@/weatherConfig';
-
-// const initialState = {
-//   favorites: FAVORITES_PLACEHOLDER,
-// };
-
-// export const favoritesReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     case FAVORITES_TOGGLE:
-//       return {
-//         ...state,
-//         favorites: state.favorites.includes(action.city)
-//           ? state.favorites.filter((city) => city !== action.city)
-//           : [...state.favorites, action.city],
-//       };
-//     default:
-//       return state;
-//   }
-// };
-
-// export default favoritesReducer;
-
-//
-
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const initialState = {
   favorites: FAVORITES_PLACEHOLDER,

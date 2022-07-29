@@ -16,13 +16,16 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'react-hooks/recommended'],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
-    // 'no-console': 0,
+    'no-param-reassign': 0,
+    'import/prefer-default-export': 0,
+    'react/jsx-wrap-multilines': 0,
+    'react/require-default-props': 0,
     'import/extensions': 0,
     'import/no-unresolved': 0,
     'linebreak-style': 0,

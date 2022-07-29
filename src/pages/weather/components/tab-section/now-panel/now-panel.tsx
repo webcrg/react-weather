@@ -1,17 +1,11 @@
 import React from 'react';
-import { connect, useSelector } from 'react-redux';
-// import HeartButton from '../HeartButton';
-// import { IpageNowProps } from '../types';
+import { useSelector } from 'react-redux';
+import { Box, CardMedia, Grid, Typography } from '@mui/material';
 import * as selectors from '@/redux/selectors';
-import { Box, CardMedia, Grid, IconButton, Typography } from '@mui/material';
-
-import { pink } from '@mui/material/colors';
 import { HeartButton } from './heart-button';
 
-function NowPanel({ isActive }) {
+function NowPanel() {
   const { temperature, icon, city } = useSelector(selectors.currentWeather);
-  const activeClass = isActive ? 'pages__item-active' : '';
-  console.log(city);
 
   return (
     <Box>
@@ -21,9 +15,9 @@ function NowPanel({ isActive }) {
             variant="h2"
             gutterBottom
             component="div"
-            fontWeight={'500'}
+            fontWeight="500"
           >
-            {temperature + '°'}
+            {`${temperature}°`}
           </Typography>
         </Grid>
         <Grid item xs={12}>
@@ -40,12 +34,7 @@ function NowPanel({ isActive }) {
         </Grid>
         <Grid item xs={12}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Typography
-              variant="h4"
-              component="div"
-              fontWeight={'500'}
-              mt={0.8}
-            >
+            <Typography variant="h4" component="div" fontWeight="500" mt={0.8}>
               {city}
             </Typography>
             <HeartButton />

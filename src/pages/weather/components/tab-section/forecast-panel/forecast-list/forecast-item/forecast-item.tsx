@@ -1,7 +1,7 @@
 import React from 'react';
-import { IMAGE_URL } from '@/weatherConfig';
 import { Paper, Grid, Typography, Box } from '@mui/material';
-// import { IforecastItemProps } from '../types';
+import { IMAGE_URL } from '@/weatherConfig';
+import { IforecastItemProps } from '@/types';
 
 function ForecastItem({ info }: IforecastItemProps) {
   const { date, time, temperature, feelsLike, status, icon } = info;

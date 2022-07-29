@@ -1,16 +1,15 @@
 import React from 'react';
-import { connect, useSelector } from 'react-redux';
-// import { IpageDetailsProps } from '@/types';
-import { currentWeather } from '@/redux/selectors';
+import { useSelector } from 'react-redux';
 import { Box, Typography } from '@mui/material';
+import { currentWeather } from '@/redux/selectors';
 
-function DetailsPanel({ isActive }: IpageDetailsProps) {
+function DetailsPanel() {
   const { city, temperature, feelsLike, weather, sunrise, sunset } =
     useSelector(currentWeather);
 
   return (
     <Box>
-      <Typography variant="h3" gutterBottom component="h3" fontWeight={'500'}>
+      <Typography variant="h3" gutterBottom component="h3" fontWeight="500">
         {city}
       </Typography>
       <Typography variant="h5" gutterBottom component="div" mt="30px">
