@@ -28,7 +28,7 @@ function Weather() {
             <Grid item xs={12} paddingRight="15px">
               <SearchForm />
             </Grid>
-            <Grid item xs={6} sx={{ paddingRight: 2 }}>
+            <Grid item xs={12} md={6} sx={{ paddingRight: 2 }}>
               <TabSection />
             </Grid>
             <Divider
@@ -36,7 +36,7 @@ function Weather() {
               flexItem
               style={{ marginRight: '-1px' }}
             />
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <FavoritesSection />
             </Grid>
           </Grid>

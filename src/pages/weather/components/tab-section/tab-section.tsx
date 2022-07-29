@@ -23,7 +23,7 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3, height: '400px', overflowY: overflowY ?? 'auto' }}>
+        <Box sx={{ p: 3, height: '400px', overflowY: overflowY ?? 'inherit' }}>
           {children}
         </Box>
       )}
