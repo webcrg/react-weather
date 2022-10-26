@@ -1,1 +1,1 @@
-demo: https://webcrg.github.io/xWeather/
+demo: https://webcrg.github.io/react-weather/
