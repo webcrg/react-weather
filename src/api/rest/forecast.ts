@@ -1,6 +1,6 @@
 import makeRequest from '../makeRequest';
 import { SERVER_URL, API_TYPE_FORECAST, URL_PARAMETERS } from '@/weatherConfig';
-import { getLocaleDate, getLocaleTime } from '@/helpers';
+import { getLocaleDate, getLocaleTime } from '@/pages/weather/helpers';
 import { IforecastResponseItem } from '@/types';
 
 function transformForecastList(list: IforecastResponseItem[]) {
