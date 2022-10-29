@@ -28,15 +28,3 @@ export function createId(idLength = 10) {
 
   return id;
 }
-
-export function calculateStats(uniqueCity) {
-  const entries = Object.entries(uniqueCity);
-  const cityCount = entries.length;
-  let mostSearched;
-
-  if (cityCount >= 1) {
-    mostSearched = entries.sort((a, b) => b[1] - a[1])[0][0];
-  }
-
-  return [cityCount, mostSearched];
-}

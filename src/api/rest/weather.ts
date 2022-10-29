@@ -1,6 +1,6 @@
 import makeRequest from '../makeRequest';
 import { SERVER_URL, API_TYPE_WEATHER, URL_PARAMETERS } from '@/weatherConfig';
-import { getLocaleTime } from '@/helpers';
+import { getLocaleTime } from '@/pages/weather/helpers';
 
 async function getWeather(cityName: string) {
   const url = `${SERVER_URL + API_TYPE_WEATHER}?q=${cityName}${URL_PARAMETERS}`;

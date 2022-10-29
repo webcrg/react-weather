@@ -8,7 +8,7 @@ import {
   FormControl,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { firstCharAt } from '@/helpers';
+import { firstCharAt } from '@/pages/weather/helpers';
 import { currentWeatherSlice } from '@/redux/reducers';
 
 function SearchForm() {
